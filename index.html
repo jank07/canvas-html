@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        <canvas width="600" height="700" id="canvas">
+        </canvas>
+    <script>
+    const canvas = document.querySelector("canvas");
+    const ctx = canvas.getContext("2d");
+    const x = canvas.width-500;
+    const y = canvas.height-650;
+    const size = 100;
+    
+    // making a blue square
+    ctx.fillStyle = "blue";
+    ctx.beginPath();
+    ctx.fillRect(50, 50, 100, 100);
+    ctx.strokeText("Square", 85, 105)
+    
+    // making a red circle
+    ctx.fillStyle = "red";
+    ctx.beginPath();
+    ctx.arc(250,110,60,0,2 * Math.PI);
+    ctx.fill()
+    ctx.strokeText("Circle", 240, 115 )
+
+    // making an orange triangle
+    ctx.fillStyle = "orange";
+    ctx.beginPath();
+    ctx.moveTo(350, 50);
+    ctx.lineTo(350, 180);
+    ctx.lineTo(470, 50);
+    ctx.closePath();
+    ctx.fill();
+    ctx.strokeText("Triangle", 370, 110)
+
+    // making a pink rectangle
+    ctx.fillStyle = "pink";
+    ctx.beginPath();
+    ctx.fillRect(490, 50, 100, 150)
+    ctx.strokeText("Rectangle", 520, 110)
+    
+
+
+</script>
+</body>
+</html>
